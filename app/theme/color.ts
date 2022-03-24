@@ -58,6 +58,11 @@ export const color = {
   // dim: palette.lighterGreen,
 
   /**
+   * Tab bar
+   */
+  tabBarText: palette.white,
+
+  /**
    * Error messages and icons.
    */
   error: palette.angry,
