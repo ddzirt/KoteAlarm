@@ -15,7 +15,8 @@ import {
   canExit,
 } from './navigation-utilities';
 import {color} from 'theme';
-import {Header} from 'components';
+import {Header, Icon} from 'components';
+import {translate} from 'i18n';
 
 /**
  * This type allows TypeScript to know what routes are defined in this navigator
@@ -45,9 +46,6 @@ const AddAlarmScreenNavigator = () => (
     <AddAlarmStack.Screen
       name="manageAlarm" // TODO: set based on navigation param
       getComponent={() => require('../screens/Home/ManageAlarm').default}
-      options={{
-        header: () => <Header headerTx="manageAlarmScreen.title" />,
-      }}
     />
   </AddAlarmStack.Navigator>
 );
@@ -61,6 +59,18 @@ const TabNavigator = () => (
       options={{
         header: () => <Header headerTx="alarmsScreen.title" />,
         tabBarStyle: {backgroundColor: color.background},
+        tabBarIcon: ({focused}) => (
+          <Icon
+            style={
+              focused
+                ? {tintColor: color.backgroundSecondary}
+                : {tintColor: color.primary}
+            }
+            icon="tabBarHome"
+          />
+        ),
+        tabBarActiveTintColor: color.tabBarText,
+        tabBarInactiveTintColor: color.primary,
       }}
     />
     <BottomTab.Screen
@@ -69,6 +79,19 @@ const TabNavigator = () => (
       options={{
         headerShown: false,
         tabBarStyle: {backgroundColor: color.background},
+        tabBarIcon: ({focused}) => (
+          <Icon
+            style={
+              focused
+                ? {tintColor: color.backgroundSecondary}
+                : {tintColor: color.primary}
+            }
+            icon="tabBarAddAlarm"
+          />
+        ),
+        tabBarActiveTintColor: color.tabBarText,
+        tabBarInactiveTintColor: color.primary,
+        tabBarLabel: translate('alarmsScreen.newAlarm')?.toString(),
       }}
     />
     <BottomTab.Screen
@@ -77,6 +100,18 @@ const TabNavigator = () => (
       options={{
         header: () => <Header headerTx="settingsScreen.title" />,
         tabBarStyle: {backgroundColor: color.background},
+        tabBarIcon: ({focused}) => (
+          <Icon
+            style={
+              focused
+                ? {tintColor: color.backgroundSecondary}
+                : {tintColor: color.primary}
+            }
+            icon="tabBarSettings"
+          />
+        ),
+        tabBarActiveTintColor: color.tabBarText,
+        tabBarInactiveTintColor: color.primary,
       }}
     />
   </BottomTab.Navigator>

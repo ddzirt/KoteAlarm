@@ -5,21 +5,15 @@ import {
   StatusBar,
   // StyleSheet,
   Text,
-  useColorScheme,
   //   View,
 } from 'react-native';
 
 const ViewAlarm: React.FC = () => {
-  // TODO: Move this away
-  const isDarkMode = useColorScheme() === 'dark';
-
   return (
     <SafeAreaView>
       <StatusBar />
       <ScrollView>
-        <Text>
-          Hey Hey manage view alarm screen {isDarkMode ? 'dark' : 'white'}
-        </Text>
+        <Text>Hey Hey manage view alarm screen</Text>
       </ScrollView>
     </SafeAreaView>
   );

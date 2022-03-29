@@ -10,7 +10,8 @@
     "alarmsScreen": {
         "title": "alarm clock",
         "noAlarms": "No alarms",
-        "create": "Create new"
+        "create": "Create new",
+        "newAlarm": "add alarm"
     },
     "alarmScreen": {
         "stop": "Stop",
@@ -19,7 +20,9 @@
     },
     "manageAlarmScreen": {
         "title": "manage alarm",
-        "titleCreate": "create alarm"
+        "titleCreate": "create alarm",
+        "cancel": "Cancel",
+        "save": "Create"
     },
     "settingsScreen": {
         "title": "settings"
