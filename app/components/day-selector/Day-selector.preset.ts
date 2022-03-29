@@ -1,20 +1,29 @@
-import {TextStyle} from 'react-native';
-import {color, sizes, spacing, typography} from 'theme';
+import {TextStyle, ViewStyle} from 'react-native';
+import {color, sizes, typography} from 'theme';
 
 export const TEXT: TextStyle = {
-  color: color.palette.white,
+  color: color.text,
   fontFamily: typography.primary,
 };
-export const BOLD: TextStyle = {fontWeight: 'bold'};
-export const HEADER: TextStyle = {
-  paddingTop: spacing[8],
-  paddingHorizontal: 0,
-};
-export const HEADER_TITLE: TextStyle = {
+export const DAY_TEXT: TextStyle = {
   ...TEXT,
-  ...BOLD,
-  fontSize: sizes.defaultTextSize,
-  lineHeight: 15,
-  textAlign: 'center',
-  letterSpacing: 1.5,
+  fontSize: sizes.highTextSize,
+  fontWeight: '100',
+};
+export const SELECTED_TEXT_COLOR = {
+  ...DAY_TEXT,
+  color: color.palette.lighterGreen,
+};
+export const DAY_TEXT_CONTAINER = {
+  borderWidth: 2,
+  borderColor: color.backgroundSecondary,
+};
+export const DAY_TEXT_CONTAINER_SELECTED = {
+  borderWidth: 2,
+  borderColor: color.palette.lighterGreen,
+};
+export const DAY_CONTAINER: ViewStyle = {
+  flexDirection: 'row',
+  justifyContent: 'space-between',
+  alignItems: 'center',
 };

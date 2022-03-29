@@ -21,6 +21,16 @@ export interface DayProps {
    * Name style overrides.
    */
   nameStyle?: StyleProp<TextStyle>;
+
+  /**
+   * Is item highlighted
+   */
+  isSelected?: boolean;
+
+  /**
+   * OnPress handler
+   */
+  onPress?: (date: string) => void;
 }
 
 export interface DaySelectorProps {
@@ -48,4 +58,14 @@ export interface DaySelectorProps {
    * Array of days to show(probably entire week)
    */
   days?: string[] | TxKeyPath[];
+
+  /**
+   * Array of days selected
+   */
+  selectedDays?: string[] | TxKeyPath[];
+
+  /**
+   * Handler for selected days
+   */
+  onPressDaySelected?: (date: string) => void;
 }

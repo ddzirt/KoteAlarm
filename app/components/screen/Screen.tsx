@@ -54,7 +54,8 @@ function ScreenWithScrolling(props: ScreenProps) {
           contentContainerStyle={[preset.inner, style]}
           keyboardShouldPersistTaps={
             props.keyboardShouldPersistTaps || 'handled'
-          }>
+          }
+          showsVerticalScrollIndicator={props.showsVerticalScrollIndicator}>
           {props.children}
         </ScrollView>
       </View>

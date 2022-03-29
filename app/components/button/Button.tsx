@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {TouchableOpacity} from 'react-native';
+import {Pressable} from 'react-native';
 import {Text} from '../text/Text';
 import {viewPresets, textPresets} from './Button.preset';
 import {ButtonProps} from './Button.props';
@@ -28,11 +28,9 @@ export function Button(props: ButtonProps) {
 
   const content = children || <Text tx={tx} text={text} style={textStyles} />;
 
-  // TODO: Replace with proper native buttons. IE: Button with ripple effect on
-  // TODO: Android and TouchableOpacity on iOS. Current implementation is a lazy stub
   return (
-    <TouchableOpacity style={viewStyles} {...rest}>
+    <Pressable style={viewStyles} {...rest}>
       {content}
-    </TouchableOpacity>
+    </Pressable>
   );
 }

@@ -45,7 +45,7 @@ export const color = {
   /**
    * A subtle color used for borders and lines.
    */
-  line: palette.offWhite,
+  line: palette.gray,
 
   /**
    * The default color of text in many components.
